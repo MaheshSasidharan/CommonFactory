@@ -1,0 +1,310 @@
+﻿.date .input-group-btn button {
+    padding: 0 3px;
+}
+
+.NavHeader {
+    font-size: 30px;
+}
+
+.NavSearchButton {
+    padding-left: 39px;
+}
+
+.SingleLineMessage {
+    margin-top: 10px;
+    font-style: italic;
+    color: rgba(200,100,100, 0.8);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.tab-pane .form-control {
+    padding: 0 0 0 5px;
+    height: 22px;
+    border: 2px inset;
+}
+
+.tab-pane input, .tab-pane select, .tab-pane textarea {
+    color: rgba(0,0,150,0.7);
+}
+
+    .tab-pane select.form-control {
+        padding-left: 1px;
+    }
+
+.form_Header {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: gray;
+}
+
+.tab-pane label {
+    font-weight: normal;
+}
+
+.DivInsideInlineBlock > div {
+    display: inline-block;
+}
+
+.per_textArea {
+    border: 2px inset;
+    border-radius: 3px;
+}
+
+.per_boxWithSelector {
+    width: 272px;
+}
+
+.per_Selector {
+    width: 65px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.per_SpouseInfo {
+    width: 100%;
+    resize: none;
+}
+
+.per_Checkbox {
+    margin-left: 17px !important;
+}
+
+.per_Info {
+    background: yellow;
+    padding: 0 5px;
+    border: 1px solid red;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.form_Container {
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 3px;
+    padding: 2px 10px 8px 2px;
+    transition: background-color ease-in 1s;
+}
+
+    .form_Container:hover {
+        background-color: rgba(0,0,255,0.03);
+    }
+
+#recruitment-tab .form_Container {
+    margin-top: 15px;
+}
+
+#progress-tab .form_Container, #credentialing-tab .form_Container, #visit-tab .form_Container, #recruitment-tab .form_Container {
+    padding-left: 8px;
+}
+
+.form_Container_marginTop {
+    margin-top: 15px;
+}
+
+.imageUploadArea {
+    background: rgba(0,0,255,0.03);
+    height: 260px;
+}
+
+/* Visits*/
+.vis_InputRow {
+    margin-top: 5px;
+}
+
+.vis_visNum {
+    width: 13%;
+}
+
+.vis_visStarted {
+    width: 27% !important;
+}
+
+.vis_visFinished {
+    width: 27% !important;
+}
+
+.vis_visDeptItin {
+    width: 30%;
+}
+
+.vis_semTaped {
+    width: 8%;
+}
+
+.vis_semFlySent {
+    width: 29%;
+}
+
+.vis_semFlyCompleted {
+    width: 29%;
+}
+
+.vis_semFlyDist {
+    width: 29%;
+}
+
+.vis_visitRows > *, .row.DivInsideInlineBlock > div {
+    vertical-align: text-bottom;
+}
+
+/* Animation */
+.slide {
+    /*position: absolute;
+    left: 0;
+    top: 42px;*/
+    position: absolute;
+    opacity: 1;
+}
+
+    .slide.ng-enter,
+    .slide.ng-leave {
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease;
+    }
+
+    .slide.ng-enter {
+        left: 100%;
+        opacity: 0;
+    }
+
+    .slide.ng-enter-active {
+        left: 0;
+        opacity: 1;
+    }
+
+    .slide.ng-leave {
+        left: 0;
+        opacity: 1;
+    }
+
+    .slide.ng-leave-active {
+        left: -100%;
+        opacity: 0;
+    }
+
+.AR_BottomSectionSub > .FormGroup_1 {
+    margin-top: 10px;
+}
+
+.FormGroup_1 > * {
+    display: inline-block;
+    width: auto;
+}
+
+.FormGroup_1 > .FG1_Name {
+    width: 420px;
+}
+
+.FormGroup_1 > .FG1_Search {
+    float: right;
+}
+
+.Search_GridContainer {
+    margin-top: 7px;
+}
+
+.Search_Grid {
+    overflow-y: auto;
+    max-height: 260px;
+}
+
+.Search_GridHeader {
+    font-weight: bold;
+}
+
+.Search_GridRow {
+    text-align: left;
+    cursor: pointer;
+}
+
+    .Search_GridRow > div, .Search_GridHeader > div {
+        display: inline-block;
+    }
+
+    .Search_GridRow:hover {
+        background-color: grey;
+        color: white;
+    }
+
+.Popup_AddPerson {
+    width: 711px;
+    height: 135px;
+}
+
+.Popup_SearchOne {
+    width: 150px;
+}
+
+.Popup_SearchTwo {
+    width: 150px;
+}
+
+.Popup_ResultOne {
+    width: 150px;
+}
+
+.Popup_ResultTwo {
+    width: 150px;
+}
+
+.Popup_ResultThree {
+    width: 150px;
+}
+
+.Popup_Result_Message {
+    text-align: center;
+    margin-top: 310px;
+    font-size: 20px;
+    color: rgb(150,50,0);
+}
+
+/* Popup for recruitment landing page*/
+
+.MR_Container .Search_GridContainer {
+    max-height: 260px;
+    min-height: 260px;
+}
+
+.MR_Container .Search_Grid {
+    max-height: 245px;
+}
+
+.MR_Container .Popup_Result_Message {
+    margin-top: 5px;
+}
+
+/* End of popup*/
+
+.ng-enter {
+    -webkit-transition: 0.5s cubic-bezier(.1,.9,0,1);
+    transition: 0.5s cubic-bezier(.1,.9,0,1);
+}
+
+.ng-enter {
+    opacity: 0;
+    margin-left: 30%;
+}
+
+.ng-enter-active {
+    margin-left: 0;
+    opacity: 1;
+}
+
+.ItemStatus input, .ItemStatus textarea {
+    transition: background-color ease-in 2s;
+    -webkit-transition: background-color ease-in 2s;
+}
+
+.ItemAdded input, .ItemAdded textarea {
+    background-color: rgba(0,255,0,0.9) !important;
+}
+
+.ItemUpdated input, .ItemUpdated textarea {
+    background-color: rgba(0,255,255,0.9) !important;
+}

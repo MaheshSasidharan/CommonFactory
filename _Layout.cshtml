@@ -1,0 +1,106 @@
+﻿@using CCOM.Sso.Helpers
+@using IMPersonnel.Helpers
+@using IMPersonnel.Utility
+@using IMPersonnel.Domain.Live;
+
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<html lang="@LocalizationHelper.Lang" ng-app="Personnel">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @RenderSection("meta", required: false)
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="~/Content/Library/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/Library/angular-ui-notification.min.css">
+    <link rel="stylesheet" href="~/Content/DropdownSubmenu.css">
+
+    <script src="~/Scripts/Library/jquery-2.1.0.js"></script>
+    <script src="~/Scripts/Library/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="~/Content/App/App.css" />
+    <script src="~/Scripts/Library/angular.min.js"></script>
+    <script src="~/Scripts/Library/angular-ui-notification.min.js"></script>
+    <script src="~/Scripts/Library/angular-route.min.js"></script>
+    <script src="~/Scripts/Library/angular-animate.min.js"></script>
+    <script src="~/Scripts/Library/angular-ui-bootstrap.min.js"></script>   
+
+    <script src="~/Scripts/App/App.js"></script>
+    <script src="~/Scripts/App/Common/Constants.js"></script>
+    <script src="~/Scripts/App/Common/CommonRoutines.js"></script>
+    <script src="~/Scripts/App/Common/DataService.js"></script>
+    <script src="~/Scripts/App/Common/Directives.js"></script>
+
+    @Html.Partial("_html5shiv")
+
+    @*<script src="~/Scripts/modernizr-2.6.2.js"></script>*@
+</head>
+<body role="document" ng-controller="LayoutPage">
+    <div>
+        <div class="LoadingContainerSmall" ng-cloak ng-show="Loading.bShowSmall">
+            <span class="glyphicon glyphicon-refresh spinning"></span>
+        </div>
+        <div class="LoadingWrapper" ng-cloak ng-show="Loading.bShow">
+            <div class="LoadingContainer">
+                <span class="glyphicon glyphicon-refresh spinning"></span>
+            </div>
+        </div>
+    </div>
+    <div class="Notification" ng-cloak ng-class="Notification.sType" ng-show="Notification.bShow">
+        {{Notification.sTitle}}
+        <button type="button" class="btn btn-default as-btn-text as-refresh-btn CC_ClosePopup CC_CloseNotification" ng-click="Notification.HideNotification()">X</button>
+    </div>
+    <div class="container">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="capitalLogo">
+                </div>
+                <a class="navbar-brand" href="@SsoLinkExtensions.GetSsoCrossSiteUrl("AskIM", "Index", "Home")">AskIM</a>
+                <a class="navbar-brand" href="#">IMPersonnel</a>
+                <div class="navbar-collapse collapse">
+                    <p class="navbar-text pull-right">
+                        @Html.Partial("_LogOnPartial")
+                    </p>
+                    @*<ul class="nav navbar-nav">
+                        <li class="@ActiveItem("Index", "Home", "")">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    </ul>*@
+                </div>
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <div class="navbar navbar-fixed-bottom CC_Footer">
+            <div class="container">
+                <p class="muted credit text-center">
+                    <a href="https://www.medicine.uiowa.edu/internalmedicine/" target="_blank">Department of Internal Medicine</a> |
+                    <a href="mailto:ask-intmed@healthcare.uiowa.edu" target="_blank">IntMed AskIM Help</a>
+                </p>
+            </div>
+        </div>
+    </div> <!-- /container -->
+
+</body>
+</html>
+
+@helper ActiveItem(string areaName)
+{
+    if (ViewContext.RouteData.DataTokens["area"] == null ||
+        ViewContext.RouteData.DataTokens["area"].ToString() == areaName)
+    {
+        @:text-decoration: none; background-color: #e3e3e3; color: #245269;
+    }
+}
+
+@helper ActiveItem(string actionName, string controllerName, string areaName)
+{
+    if (ViewContext.RouteData.Values["action"].ToString() == actionName &&
+        ViewContext.RouteData.Values["controller"].ToString() == controllerName &&
+            (ViewContext.RouteData.DataTokens["area"] == null ||
+            ViewContext.RouteData.DataTokens["area"].ToString() == areaName))
+    {
+        @:active
+    }
+}

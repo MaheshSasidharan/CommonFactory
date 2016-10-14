@@ -1,0 +1,464 @@
+﻿/* START OF - Common properties*/
+body {
+    padding: 70px;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ng-enter {
+    -webkit-transition: 0.5s cubic-bezier(.1,.9,0,1);
+    transition: 0.5s cubic-bezier(.1,.9,0,1);
+}
+
+.ng-enter {
+    opacity: 0;
+    margin-left: 30%;
+}
+
+.ng-enter-active {
+    margin-left: 0;
+    opacity: 1;
+}
+
+/*Overriding CSS for datepicker*/
+.uib-datepicker-popup {
+    transition: none !important;
+    -webkit-transition: none !important;
+}
+
+/* required as part of ui-Bootstrap*/
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+    .nav.nav-tabs {
+        margin: 5px 0px 0px 0px;
+    }
+
+.input-group > input {
+    cursor: pointer;
+}
+
+.input-group-addon{
+    padding: 0px 2px;
+}
+
+/*Bootstrap dropdwown*/
+.dropdown .caret {
+    float: right;
+    margin: 8px 3px 0px 0px;
+}
+
+/***Custom dropdown***/
+.dropdownSearch {
+    width: 120px !important;
+}
+
+.tab-pane .form-control .dropdownSearch {
+    height: 22px;
+}
+
+.dropdown-menu {
+    border: 2px solid black;
+    padding-bottom: 0;
+}
+
+.dropdownContainer {
+    overflow: auto;
+    max-height: 380px;
+}
+
+.dropdownSelectBox {
+    margin-top: 3px;
+    max-height: 25px;
+}
+
+.dropdownSelectOption {
+    width: 100%;
+}
+
+    .dropdownSelectOption .dropdownContainer .dropdownSelectOption div {
+        cursor: pointer;
+    }
+
+    .dropdownSelectOption:not(.dropdownDisabled):hover {
+        background: #2E69F6;
+        color: white;
+        cursor: pointer;
+    }
+
+.dropdownDisabled {
+    background: rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.dropdownHeaderSection {
+    padding: 0px 4px 4px 4px;
+}
+
+.dropdownFilter {
+    background: rgba(0,0,0,0.6);
+    padding-top: 3px;
+    margin-top: -6px;
+    border-radius: 2px;
+}
+
+/* End Bootstrap dropdown*/
+
+.filterHeader {
+    margin-bottom: 5px;
+    overflow: auto;
+}
+
+.InlineBlock {
+    display: inline-block !important;
+}
+
+.DispBlock {
+    display: block !important;
+}
+
+.DispNone {
+    display: none;
+}
+
+.NoCursor {
+    cursor: default;
+}
+
+.AlignCenter {
+    text-align: center;
+}
+
+.AlignRight {
+    text-align: right;
+}
+
+.Width100Percent {
+    width: 100% !important;
+}
+
+.PopupTitle {
+    font-size: 27px;
+    font-style: italic;
+}
+
+.FloatRight {
+    float: right;
+}
+
+.PaddingBottom10 {
+    padding-bottom: 10px;
+}
+
+.VerticalAlignTop {
+    vertical-align: top;
+}
+
+.MarginTop5 {
+    margin-top: 5px;
+}
+
+.MarginTop10 {
+    margin-top: 10px;
+}
+
+.customLabel {
+    font-style: italic;
+    font-weight: normal;
+    color: grey;
+}
+
+.customLabel2 {
+    font-weight: normal;
+}
+
+/**Custom Loading**/
+
+.LoadingWrapper {
+    display: table;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(256,256,256,0.7);
+    z-index: 4;
+}
+
+.LoadingContainer {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.LoadingContainerSmall {
+    position: absolute;
+    left: 20px;
+}
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+    font-size: 3em;
+}
+
+@keyframes spin {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin2 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/**End of Custom Loading**/
+
+@keyframes slideDown {
+    0%, 100% {
+        transform: translateY(-60px);
+    }
+
+    10%, 90% {
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes slideDown {
+    0%, 100% {
+        -webkit-transform: translateY(-60px);
+    }
+
+    10%, 90% {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@-moz-keyframes slideDown {
+    0%, 100% {
+        -moz-transform: translateY(-60px);
+    }
+
+    10%, 90% {
+        -moz-transform: translateY(0px);
+    }
+}
+
+.outer {
+    display: table;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 3;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+    .middle .inner {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+.Notification {
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fde073;
+    text-align: center;
+    line-height: 3.5;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px black;
+    font-weight: bold;
+    font-size: 17px;
+    transform: translateY(-60px);
+    animation: slideDown 10s 0s 1 ease;
+    -webkit-transform: translateY(-60px);
+    -webkit-animation: slideDown 10s 0s 1 ease;
+    -moz-transform: translateY(-60px);
+    -moz-animation: slideDown 10s 0s 1 ease;
+}
+
+    .Notification.Info {
+        background: #5bc0de;
+    }
+
+    .Notification.Danger {
+        background: #d43f3a;
+    }
+
+    .Notification.Warning {
+        background: #fde073;
+    }
+
+.tabContent {
+    padding: 5px;
+    background: rgba(10,0,0,0.02);
+    max-height: 800px;
+    border-radius: 3px;
+}
+
+
+.labelWithBorder {
+    font-weight: normal;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    padding: 0px;
+    vertical-align: top;
+}
+
+.FI_Filter {
+    background: rgba(25,25,25, 0.1);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+    .FI_Filter.DictionaryEditor {
+        margin-top: -40px;
+        margin-right: 0px;
+    }
+
+.FI_BottomSection {
+    position: relative;
+}
+
+.CC_CloseNotification {
+    float: right;
+    margin-top: 12px;
+    margin-right: 12px;
+}
+
+.CC_Footer {
+    background-color: rgb(200,200,200);
+}
+
+.CC_ClosePopup {
+    background-color: rgba(150,0,0,0.8);
+    color: white;
+}
+
+.CC_FormGroup_1 > * {
+    display: inline-block;
+    width: auto;
+}
+
+.CC_DeleteIO {
+    width: 460px;
+    height: 100px;
+    text-align: center;
+}
+
+.MinMaxLen100 {
+    min-width: 220px;
+    max-width: 290px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.Ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.CC_Pagination {
+    margin-top: 5px;
+}
+
+.CC_PaginationNext {
+    float: right;
+}
+
+input.Delete {
+    width: 22px;
+    padding: 2px 7px;
+    font-size: 10px;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+
+.Popup_Delete {
+    width: 460px;
+    height: 100px;
+    text-align: center;
+}
+
+.Popup_Search {
+    width: 810px;
+    height: 385px;
+}
+
+input.ng-invalid-pattern, input.ng-invalid-minlength, input.ng-invalid-required, select.ng-invalid-required, input.ng-invalid-date {
+    background-color: rgba(100,0,0,.2);
+}
+
+textarea.ng-invalid-required {
+    background-color: rgba(100,0,0,.2);
+}
+
+/** Saved Update Rows**/
+
+/*.ItemStatus, */.BackgroundTransition th {
+    transition: background-color ease-in 2s;
+    -webkit-transition: background-color ease-in 2s;
+}
+
+.ItemAdded {
+    background-color: rgba(0,255,0,0.9) !important;
+}
+
+.ItemUpdated {
+    background-color: rgba(0,255,255,0.9) !important;
+}
+
+.ItemFailed {
+    background-color: rgba(255,0,0,0.9) !important;
+}
+
+.ItemSelected {
+    background-color: rgba(255,200,0,0.5) !important;
+}
+
+/** End of Saved Update Rows**/
+
+/* END OF - Common properties*/
